@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ami Mizuno - Sailor Mercury</title>
+  <title>Ami Mizuno</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="moon-bg">
 
-  <div class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('show')">☰</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">Moon Museum</div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </nav>
+  </header>
 
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+  <main class="player-page">
 
-  <section class="player-hero">
-    <h1>Ami Mizuno</h1>
-    <h2>Sailor Mercury</h2>
-  </section>
+    <header class="page-header">
+      <h1>Ami Mizuno</h1>
+      <p>Sailor Mercury • Guardian of Water & Wisdom</p>
+    </header>
 
-  <section class="player-profile">
-    <img src="images/ami-front.jpeg" alt="Ami Mizuno" class="player-img">
+    <section class="player-profile">
 
-    <div class="player-info">
-      <h3>Stats</h3>
-      <ul>
-        <li><strong>Element:</strong> Water</li>
-        <li><strong>Role:</strong> Strategist</li>
-        <li><strong>Strength:</strong> Intelligence & analysis</li>
-        <li><strong>Special Move:</strong> Mercury Aqua Mist</li>
-      </ul>
+      <a class="card"
+         style="--glow1:#7fe7ff; --glow2:#b5f3ff;">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/ami-front.jpeg" alt="Ami front">
+          </div>
+          <div class="card-back">
+            <img class="back-img" src="images/ami-back.jpeg" alt="Ami back">
+            <div class="stats">
+              <p>Power: 7</p>
+              <p>Speed: 8</p>
+              <p>Magic: 9</p>
+            </div>
+          </div>
+        </div>
+      </a>
 
-      <h3>Highlights</h3>
-      <p>Ami is calm, brilliant, and compassionate — the brain of the Sailor Guardians.</p>
+      <div class="player-info">
+        <h3>About Ami</h3>
+        <p>Ami Mizuno is the brilliant strategist of the Sailor Guardians. Her calm focus and analytical mind guide the team through even the most complex battles.</p>
 
-      <a href="gallery.html" class="back-btn">← Back to Gallery</a>
-    </div>
-  </section>
+        <h3>Abilities</h3>
+        <p><strong>Main Attack:</strong> Mercury Aqua Mist</p>
+        <p><strong>Special Ability:</strong> Supercomputer Analysis</p>
 
+        <h3>Personality</h3>
+        <p>Quiet, thoughtful, studious, and deeply loyal to her friends.</p>
+
+        <a class="back-btn" href="gallery.html">← Back to Gallery</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/nav.js"></script>
 </body>
 </html>
