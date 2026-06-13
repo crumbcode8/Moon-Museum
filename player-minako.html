@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minako Aino - Sailor Venus</title>
+  <title>Minako Aino</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="moon-bg">
 
-  <div class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('show')">☰</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">Moon Museum</div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </nav>
+  </header>
 
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+  <main class="player-page">
 
-  <section class="player-hero">
-    <h1>Minako Aino</h1>
-    <h2>Sailor Venus</h2>
-  </section>
+    <header class="page-header">
+      <h1>Minako Aino</h1>
+      <p>Sailor Venus • Guardian of Beauty & Light</p>
+    </header>
 
-  <section class="player-profile">
-    <img src="images/minako-front.jpg" alt="Minako Aino" class="player-img">
+    <section class="player-profile">
 
-    <div class="player-info">
-      <h3>Stats</h3>
-      <ul>
-        <li><strong>Element:</strong> Light</li>
-        <li><strong>Role:</strong> Original Guardian</li>
-        <li><strong>Strength:</strong> Agility & charm</li>
-        <li><strong>Special Move:</strong> Crescent Beam</li>
-      </ul>
+      <a class="card"
+         style="--glow1:#ffd86b; --glow2:#ffe9a3;">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/minako-front.jpeg" alt="Minako front">
+          </div>
+          <div class="card-back">
+            <img class="back-img" src="images/minako-back.jpeg" alt="Minako back">
+            <div class="stats">
+              <p>Power: 8</p>
+              <p>Speed: 9</p>
+              <p>Magic: 8</p>
+            </div>
+          </div>
+        </div>
+      </a>
 
-      <h3>Highlights</h3>
-      <p>Minako is energetic, fun, and heroic — the first Sailor Guardian awakened.</p>
+      <div class="player-info">
+        <h3>About Minako</h3>
+        <p>Minako Aino is the charismatic heart of the Sailor Guardians. Her charm, experience, and light‑based attacks make her a radiant force on the battlefield.</p>
 
-      <a href="gallery.html" class="back-btn">← Back to Gallery</a>
-    </div>
-  </section>
+        <h3>Abilities</h3>
+        <p><strong>Main Attack:</strong> Crescent Beam</p>
+        <p><strong>Special Ability:</strong> Light‑Based Combat</p>
 
+        <h3>Personality</h3>
+        <p>Energetic, charming, dramatic, and endlessly optimistic.</p>
+
+        <a class="back-btn" href="gallery.html">← Back to Gallery</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/nav.js"></script>
 </body>
 </html>
