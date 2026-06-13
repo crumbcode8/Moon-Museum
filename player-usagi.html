@@ -3,44 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Usagi Tsukino - Sailor Moon</title>
+  <title>Usagi Tsukino</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="moon-bg">
 
-  <div class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('show')">☰</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">Moon Museum</div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </nav>
+  </header>
 
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+  <main class="player-page">
 
-  <section class="player-hero">
-    <h1>Usagi Tsukino</h1>
-    <h2>Sailor Moon</h2>
-  </section>
+    <header class="page-header">
+      <h1>Usagi Tsukino</h1>
+      <p>Sailor Moon • Guardian of Love & Justice</p>
+    </header>
 
-  <section class="player-profile">
-    <img src="images/usagi-front.jpeg" alt="Usagi Tsukino" class="player-img">
+    <section class="player-profile">
 
-    <div class="player-info">
-      <h3>Stats</h3>
-      <ul>
-        <li><strong>Element:</strong> Moon</li>
-        <li><strong>Role:</strong> Leader</li>
-        <li><strong>Strength:</strong> Emotional power & purity</li>
-        <li><strong>Special Move:</strong> Moon Tiara Action</li>
-      </ul>
+      <a class="card"
+         style="--glow1:#ffb7d5; --glow2:#ffd1e8;">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/usagi-front.jpeg" alt="Usagi front">
+          </div>
+          <div class="card-back">
+            <img class="back-img" src="images/usagi-back.jpeg" alt="Usagi back">
+            <div class="stats">
+              <p>Power: 8</p>
+              <p>Speed: 6</p>
+              <p>Magic: 10</p>
+            </div>
+          </div>
+        </div>
+      </a>
 
-      <h3>Highlights</h3>
-      <p>Usagi is cheerful, clumsy, loving, and grows into the legendary warrior Sailor Moon.</p>
+      <div class="player-info">
+        <h3>About Usagi</h3>
+        <p>Usagi Tsukino is the warm‑hearted, emotional leader of the Sailor Guardians. Though clumsy at first, her compassion and love unlock incredible cosmic power.</p>
 
-      <a href="gallery.html" class="back-btn">← Back to Gallery</a>
-    </div>
-  </section>
+        <h3>Abilities</h3>
+        <p><strong>Main Attack:</strong> Moon Tiara Action</p>
+        <p><strong>Special Ability:</strong> Silver Crystal Healing</p>
 
+        <h3>Personality</h3>
+        <p>Optimistic, caring, dramatic, and fiercely loyal to her friends.</p>
+
+        <a class="back-btn" href="gallery.html">← Back to Gallery</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/nav.js"></script>
 </body>
 </html>
