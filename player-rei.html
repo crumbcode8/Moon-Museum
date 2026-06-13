@@ -3,44 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rei Hino - Sailor Mars</title>
+  <title>Rei Hino</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="moon-bg">
 
-  <div class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('show')">☰</div>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">Moon Museum</div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </nav>
+  </header>
 
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+  <main class="player-page">
 
-  <section class="player-hero">
-    <h1>Rei Hino</h1>
-    <h2>Sailor Mars</h2>
-  </section>
+    <header class="page-header">
+      <h1>Rei Hino</h1>
+      <p>Sailor Mars • Guardian of Fire & Passion</p>
+    </header>
 
-  <section class="player-profile">
-    <img src="images/rei-front.jpeg" alt="Rei Hino" class="player-img">
+    <section class="player-profile">
 
-    <div class="player-info">
-      <h3>Stats</h3>
-      <ul>
-        <li><strong>Element:</strong> Fire</li>
-        <li><strong>Role:</strong> Spiritual Warrior</li>
-        <li><strong>Strength:</strong> Psychic intuition</li>
-        <li><strong>Special Move:</strong> Fire Soul</li>
-      </ul>
+      <a class="card"
+         style="--glow1:#ff6b6b; --glow2:#ff9b9b;">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/rei-front.jpeg" alt="Rei front">
+          </div>
+          <div class="card-back">
+            <img class="back-img" src="images/rei-back.jpeg" alt="Rei back">
+            <div class="stats">
+              <p>Power: 9</p>
+              <p>Speed: 7</p>
+              <p>Magic: 9</p>
+            </div>
+          </div>
+        </div>
+      </a>
 
-      <h3>Highlights</h3>
-      <p>Rei is elegant, fierce, and deeply spiritual, balancing discipline with fiery passion.</p>
+      <div class="player-info">
+        <h3>About Rei</h3>
+        <p>Rei Hino is a shrine maiden with powerful spiritual intuition. Her fiery personality and unwavering discipline make her a fierce protector of the team.</p>
 
-      <a href="gallery.html" class="back-btn">← Back to Gallery</a>
-    </div>
-  </section>
+        <h3>Abilities</h3>
+        <p><strong>Main Attack:</strong> Fire Soul</p>
+        <p><strong>Special Ability:</strong> Psychic Flame Readings</p>
 
+        <h3>Personality</h3>
+        <p>Passionate, disciplined, intuitive, and fiercely protective.</p>
+
+        <a class="back-btn" href="gallery.html">← Back to Gallery</a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/nav.js"></script>
 </body>
 </html>
+
