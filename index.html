@@ -3,55 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sailor Moon Showcase</title>
+  <title>Moon Museum</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="moon-bg">
 
-  <!-- Mobile Nav Toggle -->
-  <div class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('show')">☰</div>
-
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Sailor Moon Character Showcase</h1>
-    <p>Explore the Sailor Guardians and learn about their powers, personalities, and stories.</p>
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">Moon Museum</div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Preview Cards -->
-  <section class="preview-section">
-    <h2>Featured Guardians</h2>
+  <main>
 
-    <div class="preview-grid">
-
-      <div class="preview-card">
-        <img src="images/usagi-front.jpeg" alt="Usagi Tsukino">
-        <h3>Usagi Tsukino</h3>
-        <a href="player-usagi.html" class="card-btn">View Profile</a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Moon Museum</h1>
+          <h2>Featured Sailor Guardians</h2>
+        </div>
       </div>
+    </section>
 
-      <div class="preview-card">
-        <img src="images/rei-front.jpeg" alt="Rei Hino">
-        <h3>Rei Hino</h3>
-        <a href="player-rei.html" class="card-btn">View Profile</a>
+    <!-- FEATURED CARDS -->
+    <section class="cards-section">
+      <div class="cards-grid">
+
+        <!-- Usagi -->
+        <a href="player-usagi.html" class="card"
+           style="--glow1:#ffb7d5; --glow2:#ffd1e8;">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/usagi-front.jpeg" alt="Usagi Tsukino front card">
+            </div>
+            <div class="card-back">
+              <img class="back-img" src="images/usagi-back.jpeg" alt="Usagi Tsukino back card">
+              <div class="stats">
+                <p>Power: 8</p>
+                <p>Speed: 6</p>
+                <p>Magic: 10</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Ami -->
+        <a href="player-ami.html" class="card"
+           style="--glow1:#7fe7ff; --glow2:#b5f3ff;">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/ami-front.jpeg" alt="Ami Mizuno front card">
+            </div>
+            <div class="card-back">
+              <img class="back-img" src="images/ami-back.jpeg" alt="Ami Mizuno back card">
+              <div class="stats">
+                <p>Power: 7</p>
+                <p>Speed: 8</p>
+                <p>Magic: 9</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Rei -->
+        <a href="player-rei.html" class="card"
+           style="--glow1:#ff6b6b; --glow2:#ff9b9b;">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/rei-front.jpeg" alt="Rei Hino front card">
+            </div>
+            <div class="card-back">
+              <img class="back-img" src="images/rei-back.jpeg" alt="Rei Hino back card">
+              <div class="stats">
+                <p>Power: 9</p>
+                <p>Speed: 7</p>
+                <p>Magic: 9</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
       </div>
+    </section>
 
-      <div class="preview-card">
-        <img src="images/ami-front.jpeg" alt="Ami Mizuno">
-        <h3>Ami Mizuno</h3>
-        <a href="player-ami.html" class="card-btn">View Profile</a>
-      </div>
+  </main>
 
-    </div>
-  </section>
-
+  <script src="js/nav.js"></script>
 </body>
 </html>
