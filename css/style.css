@@ -1,1 +1,227 @@
+/* GLOBAL FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600&display=swap');
+
+/* GLOBAL BACKGROUND + TEXT */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.55);
+  overflow-x: hidden;
+}
+
+/* HEADINGS — PRETTY FONT */
+h1, h2, h3, h4 {
+  font-family: "Marcellus", serif;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+/* BACKGROUND IMAGE + FADE */
+.moon-bg {
+  position: relative;
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0) 60%, #e4f1ff 100%),
+    url("images/moon-kingdom.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* WHITE VEIL */
+.moon-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 360px;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 40px 20px 80px;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin: 0;
+}
+
+.hero-content h2 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* FEATURED CARDS */
+.cards-section {
+  margin-top: -170px;
+  padding-bottom: 10px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* CARD + FLIP */
+.card {
+  width: 220px;
+  aspect-ratio: 3 / 4;
+  perspective: 1200px;
+  position: relative;
+  text-decoration: none;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 50%,
+    var(--glow1) 0%,
+    var(--glow2) 40%,
+    transparent 75%
+  );
+  filter: blur(28px);
+  opacity: 0.7;
+  z-index: -1;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+  filter: blur(40px);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: relative;
+}
+
+.card-front img,
+.card-back .back-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* STATS */
+.stats {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+  font-family: "Marcellus", serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.9);
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+/* PAGE HEADER */
+.page-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+}
+
+.page-header p {
+  font-size: 1rem;
+}
+
+/* PLAYER PAGES */
+.player-profile {
+  max-width: 1000px;
+  margin: 20px auto 120px;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.player-info {
+  flex: 1 1 260px;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
