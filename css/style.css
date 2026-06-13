@@ -22,31 +22,29 @@ h1, h2, h3, h4 {
   text-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
 
-/* BACKGROUND IMAGE + SOFT FADE */
+/* BACKGROUND IMAGE — FIXED ORDER (image on top, gradient behind) */
 .moon-bg {
   position: relative;
   background-image:
+    url("images/moon-kingdom.jpeg"),
     linear-gradient(
       to bottom,
       rgba(255,255,255,0) 70%,
       rgba(228,241,255,0.85) 100%
-    ),
-    url("images/moon-kingdom.jpeg");
+    );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* WHITE VEIL — MUST BE BEHIND EVERYTHING */
+/* WHITE VEIL — FIXED (no more blocking card flip) */
 .moon-bg::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.15);
   pointer-events: none;
-
-  /* FIX: move veil behind cards so flip works */
-  z-index: -9999;
+  z-index: -9999; /* ensures cards flip above it */
 }
 
 /* HERO */
